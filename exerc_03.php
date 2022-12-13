@@ -6,11 +6,11 @@
 
 <form method="post">
     <label>Nome:</label>
-    <input type="text" name=nome> <br>
+    <input type="text" name="nome"> <br>
     <label>Sexo:</label>
-    <input type="text" name=sexo> <br>
+    <input type="text" name="sexo"> <br>
     <label>Idade:</label>
-    <input type="text" name=idade> <br><br>
+    <input type="text" name="idade"> <br><br>
     <input type="submit" value="Resposta">
 </form>
 
@@ -26,3 +26,4 @@ if (($sexoLow == "feminino") && ($idade < 25)) {
 } else {
     print("$nome NÃO ACEITA!");
 }
+?>
