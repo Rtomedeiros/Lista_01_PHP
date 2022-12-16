@@ -5,9 +5,7 @@
 </p>
 
 <?php
-$num = array(
-    100, 200, -400, 150, 99, 202, 180, 10, 80, 0,
-);
+$num = array(100, 200, -400, 150, 99, 202, 180, 10, 80, 0);
 
 $sizeArrayNum = sizeof($num);
 //print("Tamanho da lista: $tamanhodalista <br><br>");
