@@ -33,36 +33,19 @@ for ($i = 0; $i < $sizeArrayV02; $i++) {
 }
 print(")<br><br>");
 
-//$vetor01 = array(10, 14, 24, 18, 31, 1, 0, 150, 77, 65);
-//$vetor02 = array(0, 18, 400, 31, 9, 65, 8, 10, 1, 200);
-echo ("Comuns = (10, 18, 31, 1, 0, 65)<br>");
-echo ("Não Comuns = (14, 24, 150, 77, 400, 9, 8, 200)<br><br>");
-
-$indiceVComum = 0; //Variavel para rodar o indice do Vetor elementos COMUNS quando for armazenar os elementos iguais dos dois vetores iniciais.
-for ($i = 0; $i < $sizeArrayV01; $i++) {
-    //For dentro de outro for para comparar cada elemento de V01 com todos de V02.
-    //Até fazer a comparação entre todos os elementos dos dois vetores.
-    //ENCONTRANDO OS ELEMENTOS COMUNS PRIMEIRO.
-    for ($j = 0; $j < $sizeArrayV02; $j++) {
-        if ($vetor01[$i] == $vetor02[$j]) { //Se for iguais, são comuns.
-            $vetorComum[$indiceVComum] = $vetor01[$i]; //Poderia ser usado o $vetor02[$i], pois o elemento é igual.
-            $indiceVComum++;
-        }
-    }
-}
-
-$sizeArrayVComum = sizeof($vetorComum);
+//echo ("Comuns = (10, 18, 31, 1, 0, 65)<br>");
+//echo ("Não Comuns = (14, 24, 150, 77, 400, 9, 8, 200)<br><br>");
 
 //ENCONTRANDO OS ELEMENTOS INCOMUNS.
-$indiceVIncomum = 0; //Variavel para rodar o indice do Vetor elementos INCOMUNS quando for armazenar os elementos distintos dos dois vetores iniciais.
-//Elementos Incomuns no Vetor01.
-for ($i = 0; $i < $sizeArrayV01; $i++) {
-}
+$vetorIncomum01 = array_diff($vetor01, $vetor02);
+$vetorIncomum02 = array_diff($vetor02, $vetor01);
+$vetorIncomum = array_merge($vetorIncomum01, $vetorIncomum02);
 
+//print_r($vetorIncomum);
 
 $sizeArrayVIncomum = sizeof($vetorIncomum);
-//print("$sizeArrayVResult<br><br>");
 
+print("<h3>Vetor dos números não comuns aos vetores</h3>");
 //Visualizar o Vetor de elementos INCOMUNS.
 print("<b>Vetor Resultado</b>: (");
 for ($i = 0; $i < $sizeArrayVIncomum; $i++) {
